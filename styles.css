@@ -1,4 +1,20 @@
 /*select an item --> . and then name*/
-.navbar {
-    background-color:aliceblue
+.nav-wrapper {
+    /*apply flex styles to the direct divs under nav-wrapper 
+    (next to each other)*/
+    display: flex; 
+    /*space out using all space in between*/
+    justify-content: space-between; 
+    padding: 38px; /*margin > border > padding*/
+
+}
+.left-side {
+    display: flex;
+
+}
+/*start with nav wrapper and apply these styles, then go to left side and grab the divs inside there*/
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    /*font-size: 0.9em; /*90%*/
+    text-transform: uppercase;
 }
