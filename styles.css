@@ -6,15 +6,35 @@
     /*space out using all space in between*/
     justify-content: space-between; 
     padding: 38px; /*margin > border > padding*/
-
 }
+
 .left-side {
     display: flex;
-
 }
+
 /*start with nav wrapper and apply these styles, then go to left side and grab the divs inside there*/
 .nav-wrapper > .left-side > div {
     margin-right: 20px;
-    /*font-size: 0.9em; /*90%*/
+    font-size: 0.9em; /*90%*/
     text-transform: uppercase;
+}
+.nav-link-wrapper{
+    height: 22px;
+    border-bottom: 1px solid transparent; /*not going to see this*/
+    transition: border-bottom 0.5s; /*animate the line underneath*/
+}
+
+.nav-link-wrapper a{
+    color: darkslategrey;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+/*when hover occurs, change style*/
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover{
+    color: black;
 }
