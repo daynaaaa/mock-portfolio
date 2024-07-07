@@ -1,3 +1,17 @@
+/*Master styles*/
+body{
+    margin: 0px; /*default is 8px; now images go to the edges*/
+}
+
+/*layouts --> use grid; small elements (nav bars) --> flex box*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr; 
+    /*use grid to make template columns for 1 fractional unit (fr, 100%)*/
+}
+
+/*Nav Styles*/
+
 /*select an item --> . and then name*/
 .nav-wrapper {
     /*apply flex styles to the direct divs under nav-wrapper 
@@ -18,6 +32,7 @@
     font-size: 0.9em; /*90%*/
     text-transform: uppercase;
 }
+
 .nav-link-wrapper{
     height: 22px;
     border-bottom: 1px solid transparent; /*not going to see this*/
@@ -37,4 +52,60 @@
 
 .nav-link-wrapper a:hover{
     color: black;
+}
+
+/*Portfolio Styles*/
+.portfolio-items-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.portfolio-item-wrapper{
+    position: relative; /*force items to go on top of each other*/
+}
+
+.portfolio-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover; /*cropping images so they will sit next to each other*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img{ /*have to select the image*/
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+/*starting*/
+.img-text-wrapper .subtitle{
+    transition:1s;
+    font-weight: 600; /*bold*/
+    color: transparent;
+    font-size: 50px;
+}
+
+.img-text-wrapper:hover .subtitle{
+    font-weight: 600; /*bold*/
+    color:
+    rgb(208, 197, 255);
+    font-size: 50px;
+}
+
+.portfolio-img-background:hover .img-darken{
+    transition: 1s;
+    filter: brightness(20%);
 }
