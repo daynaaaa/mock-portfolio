@@ -53,6 +53,20 @@
             </div>
         </div>
     </div>
-    
 </body>
+<!--javascript-->
+<script>
+    //$('.portfolio-item-wrapper') will give u that wrapper
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    portfolioItems.forEach(portfolioItem => { //this is gonna be applied on all portfolio items
+        portfolioItem.addEventListener('mouseover', () =>{//hover
+            //console.log(portfolioItem); shows on console
+            //console.log(portfolioItem.childNodes);
+            portfolioItem.childNodes[3].classList.add('img-darken');
+        })
+        portfolioItem.addEventListener('mouseout', () =>{
+            portfolioItem.childNodes[3].classList.remove('img-darken');
+        })
+    })
+</script>    
 </html>

@@ -105,7 +105,7 @@ body{
     font-size: 50px;
 }
 
-.portfolio-img-background:hover .img-darken{
+.img-darken{
     transition: 1s;
     filter: brightness(20%);
 }
